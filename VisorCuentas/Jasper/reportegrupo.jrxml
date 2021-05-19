@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportegrupo" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="430716c6-15d0-4526-879c-ae9a3df4f7a0">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="visor.xml"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT SUM(Saldo), AVG(Saldo),Nacionalidad FROM cuentas
+GROUP BY Nacionalidad;]]>
+	</queryString>
+	<field name="SUM(Saldo)" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="SUM(Saldo)"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUM(Saldo)"/>
+	</field>
+	<field name="AVG(Saldo)" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="AVG(Saldo)"/>
+		<property name="com.jaspersoft.studio.field.label" value="AVG(Saldo)"/>
+	</field>
+	<field name="Nacionalidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Nacionalidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="Nacionalidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cuentas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="90" y="0" width="120" height="30" forecolor="#006699" backcolor="rgba(255, 255, 255, 0.61960787)" uuid="61ea5840-4893-4d76-a1c9-daffcd3c852e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b59f853-7f16-4171-8bc8-0cdc7eb759d5"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nacionalidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="210" y="0" width="100" height="30" forecolor="#006699" backcolor="rgba(255, 255, 255, 0.61960787)" uuid="3ffa3fde-670a-4b47-8805-40447d3cd47d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4d7aa5e-8bc7-4cf7-b5ff-d394dee5a343"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Saldo Nac.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="310" y="0" width="100" height="30" forecolor="#006699" backcolor="rgba(252, 252, 252, 0.61960787)" uuid="d8dfa6ed-b8af-4417-bf1d-b27059fd4184">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e628f82-ac87-4d62-844b-d6da583370f2"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Promedio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="0" width="120" height="30" uuid="c225810a-2e54-4a61-88f9-85cdddca178b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8b59f853-7f16-4171-8bc8-0cdc7eb759d5"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nacionalidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="0" width="100" height="30" uuid="8c865ef9-c3b3-473f-a384-920dcd8c5600">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4d7aa5e-8bc7-4cf7-b5ff-d394dee5a343"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUM(Saldo)}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="100" height="30" uuid="20e95842-7d95-4db0-9bf6-3eb392517fee">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e628f82-ac87-4d62-844b-d6da583370f2"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{AVG(Saldo)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

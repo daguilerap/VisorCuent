@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="352.0" maxWidth="545.0" prefHeight="352.0" prefWidth="545.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.CuentaBater">
+   <children>
+      <Pane fx:id="panelPrincipal" maxHeight="352.0" maxWidth="545.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="352.0" prefWidth="545.0">
+         <children>
+            <ImageView disable="true" fitHeight="670.0" fitWidth="1340.0" layoutX="-670.0" layoutY="-32.0" opacity="0.43" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fondoTurquesa.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="labelTitulo" layoutX="224.0" layoutY="26.0" prefHeight="28.0" prefWidth="157.0" text="CUENTAS EXISTENTES" textFill="#0e5d6b">
+               <font>
+                  <Font name="Century Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTitulo1" layoutX="234.0" layoutY="26.0" prefHeight="28.0" prefWidth="148.0" text="CUENTAS NUEVAS" textFill="#0e5d6b" visible="false">
+               <font>
+                  <Font name="Century Gothic Bold" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNom" layoutX="138.0" layoutY="105.0" text="Número:" textFill="#0e5d6b">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTit" layoutX="140.0" layoutY="134.0" text="Titular:" textFill="#0e5d6b">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelFecAp" layoutX="143.0" layoutY="200.0" text="Fecha Apertura:" textFill="#0e5d6b">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="140.0" layoutY="168.0" text="Nacionalidad:" textFill="#0e5d6b">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelSald" layoutX="146.0" layoutY="231.0" text="Saldo:" textFill="#0e5d6b">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField id="nombre" fx:id="fieldNum" layoutX="238.0" layoutY="101.0" prefHeight="25.0" prefWidth="157.0">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="fieldTit" layoutX="238.0" layoutY="130.0" prefHeight="25.0" prefWidth="157.0">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font></TextField>
+            <TextField fx:id="fieldNac" layoutX="238.0" layoutY="164.0" prefHeight="25.0" prefWidth="157.0">
+            <font>
+               <Font name="Century Gothic" size="12.0" />
+            </font></TextField>
+            <TextField id="nombre" fx:id="fieldFecAp" layoutX="263.0" layoutY="196.0" prefHeight="25.0" prefWidth="132.0">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font></TextField>
+            <TextField id="nombre" fx:id="fieldSald" layoutX="238.0" layoutY="227.0" prefHeight="25.0" prefWidth="157.0">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font></TextField>
+            <Button fx:id="botonBack" layoutX="60.0" layoutY="289.0" mnemonicParsing="false" onAction="#accionback" prefHeight="25.0" prefWidth="107.0" text="&lt;&lt;" textFill="#0e5d6b" visible="false">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonNext" layoutX="380.0" layoutY="289.0" mnemonicParsing="false" onAction="#accionnext" prefHeight="26.0" prefWidth="107.0" text="&gt;&gt;" textFill="#0e5d6b">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonCancela" layoutX="60.0" layoutY="289.0" mnemonicParsing="false" onAction="#accionC" prefHeight="25.0" prefWidth="107.0" text="Cancelar" textFill="#0e5d6b" visible="false">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="botonAcepta" layoutX="380.0" layoutY="289.0" mnemonicParsing="false" onAction="#accionA" prefHeight="26.0" prefWidth="107.0" text="Aceptar" textFill="#0e5d6b" visible="false">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font></Button>
+            <Button fx:id="botonNuevo" layoutX="380.0" layoutY="289.0" mnemonicParsing="false" onAction="#accionNuevo" prefHeight="26.0" prefWidth="107.0" text="Nuevo Usuario" textFill="#0e5d6b" visible="false">
+               <font>
+                  <Font name="Century Gothic" size="12.0" />
+               </font>
+            </Button>
+            <ImageView disable="true" fitHeight="100.0" fitWidth="122.0" layoutX="21.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botonPDF" layoutX="455.0" layoutY="12.0" mnemonicParsing="false" onAction="#accPDF" prefHeight="29.0" prefWidth="81.0" text="PDF" textFill="#0e5d6b">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="botnHTML" layoutX="455.0" layoutY="62.0" mnemonicParsing="false" onAction="#accHTML" prefHeight="24.0" prefWidth="81.0" text="HTML" textFill="#0e5d6b" />
+            <Label layoutX="464.0" layoutY="40.0" prefHeight="20.0" prefWidth="81.0" text="Reportes" textAlignment="CENTER" textFill="#0e5d6b">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

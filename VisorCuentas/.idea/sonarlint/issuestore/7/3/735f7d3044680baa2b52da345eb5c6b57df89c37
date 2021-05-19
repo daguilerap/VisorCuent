@@ -1,0 +1,18 @@
+
+>
+java:S1170"!Make this final field static too.(¹©½é8ú†ï¶Ú.
+r	java:S116"VRename this field "PASSWORD_BD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹©½é8ú†ï¶Ú.
+>
+java:S1170"!Make this final field static too.(êŸë›8ú†ï¶Ú.
+4
+java:S1700"Rename field "conexion"(Ë¦´ò8ú†ï¶Ú.
+s	java:S116"RRename this field "USER_BD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( ÓØÏüÿÿÿÿ8ú†ï¶Ú.
+C
+java:S1170"!Make this final field static too.( ÓØÏüÿÿÿÿ8ú†ï¶Ú.
+E
+java:S2115")Add password protection to this database.(“³Y8ú†ï¶Ú.
+s	java:S116"WRename this field "URL_CONEXION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏÂ†8ú†ï¶Ú.
+m	java:S116"QRename this field "DRIVER" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êŸë›8ú†ï¶Ú.
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(Ôù˜Œÿÿÿÿÿ8ú†ï¶Ú.
+>
+java:S1170"!Make this final field static too.(ÏÂ†8ú†ï¶Ú.

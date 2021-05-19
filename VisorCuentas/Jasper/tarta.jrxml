@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tarta" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="be18a792-fea4-4cba-ac6d-4f2b521b512e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="visor.xml"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT COUNT(titular)* 100/(SELECT COUNT(titular)FROM cuentas)  FROM cuentas WHERE saldo<1000 UNION SELECT COUNT(titular)*100/(SELECT COUNT(titular) FROM cuentas) FROM cuentas WHERE saldo>=1000]]>
+	</queryString>
+	<field name="COUNT(titular)* 100/(SELECT COUNT(titular)FROM cuentas)" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="COUNT(titular)* 100/(SELECT COUNT(titular)FROM cuentas)"/>
+		<property name="com.jaspersoft.studio.field.label" value="COUNT(titular)* 100/(SELECT COUNT(titular)FROM cuentas)"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="216" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="80" y="10" width="390" height="196" uuid="569dc829-6675-4e0c-b962-0998786adafb"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<dataset resetType="Report"/>
+					<keyExpression><![CDATA[$F{COUNT(titular)* 100/(SELECT COUNT(titular)FROM cuentas)}]]></keyExpression>
+					<valueExpression><![CDATA[$F{COUNT(titular)* 100/(SELECT COUNT(titular)FROM cuentas)}]]></valueExpression>
+				</pieDataset>
+				<piePlot>
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>
